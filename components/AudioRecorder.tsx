@@ -34,7 +34,7 @@ export default function AudioRecorder() {
         recording.setOnRecordingStatusUpdate((o)=> {
             console.log('metering', o.metering);
             setMetering(o.metering)
-            setDataRef.current.setData(o.metering);
+            // setDataRef?.current?.setData(o.metering);
         });
         await recording.startAsync();
       setRecording(recording);
