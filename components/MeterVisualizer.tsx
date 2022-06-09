@@ -1,11 +1,9 @@
-
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { View } from 'react-native';
 import { Grid, LineChart, XAxis, YAxis } from 'react-native-svg-charts';
 
-const MeterVisualizer = ({data} : any) =>  {
-  // const data = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80, 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
+const MeterVisualizer = ({ data }: any) => {
   const axesSvg = { fontSize: 10, fill: 'grey' };
-  const verticalContentInset = { top: 10, bottom: 10 }
+  const verticalContentInset = { top: 10, bottom: 10 };
   const xAxisHeight = 10;
 
   return (
@@ -25,7 +23,7 @@ const MeterVisualizer = ({data} : any) =>  {
           contentInset={verticalContentInset}
           svg={{ stroke: 'rgb(134, 65, 244)' }}
         >
-          <Grid/>
+          <Grid />
         </LineChart>
         <XAxis
           style={{ marginHorizontal: -10, height: xAxisHeight }}
@@ -37,15 +35,6 @@ const MeterVisualizer = ({data} : any) =>  {
       </View>
     </View>
   );
-}
+};
 
 export default MeterVisualizer;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-  },
-});

@@ -23,7 +23,8 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
+    >
       <RootNavigator />
     </NavigationContainer>
   );
@@ -60,8 +61,9 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="TabOne"
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
-      }}>
+        tabBarActiveTintColor: Colors[colorScheme].tint
+      }}
+    >
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
@@ -72,8 +74,9 @@ function BottomTabNavigator() {
             <Pressable
               onPress={() => navigation.navigate('Modal')}
               style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
+                opacity: pressed ? 0.5 : 1
+              })}
+            >
               <FontAwesome
                 name="info-circle"
                 size={25}
@@ -81,7 +84,7 @@ function BottomTabNavigator() {
                 style={{ marginRight: 15 }}
               />
             </Pressable>
-          ),
+          )
         })}
       />
       <BottomTab.Screen
@@ -89,7 +92,7 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: 'Help',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />
         }}
       />
     </BottomTab.Navigator>
