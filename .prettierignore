@@ -1,0 +1,10 @@
+node_modules
+.next
+yarn.lock
+package-lock.json
+public
+out
+coverage
+scripts
+codeceptjs_report
+unit_test_report
